@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@font_color_dark: #222;
 
 * {
     box-sizing: border-box;
@@ -9,7 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 0;
-    color: @font_color_dark;
+    color: #222;
 }
 
 a {
@@ -17,8 +16,13 @@ a {
     color: inherit;
 }
 
+span {
+    color: rgb(190, 0, 0);
+    user-select: none;
+}
+
 header {
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header.webp');
     height: 100vh;
     overflow: hidden;
     padding: 2vh;
@@ -57,47 +61,14 @@ header {
         font-size: 12vh !important;
         font-weight: 700;
         margin-left: 2vw;
-        span {
+        .square {
+            height: 50px;
+            width: 50px;
             color: rgb(190, 0, 0);
         }
     }
     nav {
         float: right;
-    }
-    @media screen and (max-width: 700px) {
-        background-position: 34%;
-        .item {
-            float: none;
-            display: block;
-            text-align: center;
-            margin-top: 2vh;
-            font-size: 3vh;
-        }
-        h1 {
-            font-size: 7vh !important;
-            margin-top: 4vh !important;
-        }
-        div.item {
-            font-size: 3vh;
-            margin-top: 2vh;
-        }
-        div.item::after {
-            margin-left: 38%;
-            height: 2px;
-            margin-top: 2vh;
-        }
-        div.item:hover::after {
-            width: 24%;
-            margin-left: 38%;
-        }
-        .menu {
-            margin-top: 12vh;
-            margin-right: 0;
-            margin-bottom: -2vh;
-        }
-        nav {
-            float: none;
-        }
     }
     .arrows {
         width: 60px;
@@ -114,15 +85,13 @@ header {
         animation: arrow 2s infinite;
         -webkit-animation: arrow 2s infinite;
     }
-    @keyframes arrow
-    {
+    @keyframes arrow {
     0% {opacity:0}
     40% {opacity:1}
     80% {opacity:0}
     100% {opacity:0}
     }
-    @-webkit-keyframes arrow
-    {
+    @-webkit-keyframes arrow {
     0% {opacity:0}
     40% {opacity:1}
     80% {opacity:0}
@@ -146,11 +115,10 @@ main {
     section {
         margin: 0;
         width: 100%;
-        height: 100vh;
         padding: 5vh;
         background-color: #eee;
     }
-    section#first {
+    section#about {
         padding-top: 2vh;
         text-align: justify;
         font-size: 1.5vw;
@@ -158,20 +126,12 @@ main {
         h2 {
             font-size: 4vw;
             text-align: center;
-            user-select: none;
-        }
-        @media screen and (max-width: 700px) {
-            font-size: 1.6vh;
-            padding: 3vh;
-            h2 {
-                font-size: 7vw;
-                margin-top: -.1vh;
-            }
         }
     }
-    section.second {
-        background-image: url('../img/second.jpg');
+    section.image {
+        background-image: url('../img/second.webp');
         opacity: 0.85;
+        height: 100vh;
         h1 {
             color: white;
             text-align: center;
@@ -179,32 +139,17 @@ main {
             margin-top: 30vh;
             user-select: none;
         }
-        span {
-            color: rgba(190, 0, 0);
-        }
-        @media screen and (max-width: 700px) {
-            h1 {
-                font-size: 8vh;
-            }
-            background-position: 38%;
-        }
     }
-    section#third {
+    section#projects {
         overflow: hidden;
         h2 {
-            margin-top: -2vh;
+            margin-top: -.2vh;
             font-size: 4vw;
             text-align: center;
-            user-select: none;
         }
         .container {
-            width: 100%;
             display: inline-flex;
-            flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-evenly;
-            align-items: stretch;
-            align-content: space-around;
             .part {
                 text-align: center;
                 user-select: none;
@@ -218,9 +163,10 @@ main {
                 h1 {
                     text-align: center;
                     font-size: 5vh;
+                    margin-top: 2vh;
                 }
                 img {
-                    width: 80%;
+                    width: 90%;
                 }
                 p {
                     margin-top: 5vh;
@@ -234,4 +180,83 @@ main {
             }
         }
     }
+    section#contact {
+        height: 90vh;
+        background-color: #bbb;
+        margin: 0;
+        text-align: center;
+        .title {
+            font-size: 6vh;
+            margin: 3vh;
+            font-weight: 700;
+        }
+        aside.form {
+            float: left;
+            width: 40%;
+            input[type = text] {
+                width: 35vh;
+                height: 2vw;
+                margin: 1vh;
+                text-align: center;
+                transition: .25s;
+                background-color: white;
+                border: 0;
+                user-select: none;
+            }
+            input[type = text]:hover, input[type = text]:focus {
+                width: 40vh;
+                box-shadow: 3px 3px #222;
+            }
+            textarea {
+                width: 35vh;
+                height: 10vw;
+                font-family: inherit;
+                text-align: center;
+                padding: 1vh;
+                border: 0;
+                transition: .25s;
+                resize: none;
+            }
+            textarea:hover, textarea:focus {
+                box-shadow: 3px 3px #222;
+                width: 40vh;
+                padding-right: 3.5vh;
+                padding-left: 3.5vh;
+            }
+            button {
+                width: 35vh;
+                height: 2vw;
+                margin: 1vh;
+                transition: .25s;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(190, 0, 0);
+                border: 0;
+            }
+            button:hover {
+                width: 40vh;
+                background-color: rgb(160, 0, 0);
+                box-shadow: 3px 3px #222;
+            }
+        }
+        aside.map {
+            float: right;
+            width: 40%;
+            iframe {
+                width: 32vw;
+                height: 42vh;
+                user-select: none;
+            }
+            label {
+                display: block;
+                font-size: 4vh;
+                margin: 3vh;
+            }
+        }
+    }
+}
+
+footer {
+    color: white;
+    text-align: center;
 }
