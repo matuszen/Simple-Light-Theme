@@ -22,9 +22,12 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: 'Lato', sans-serif;
   background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Lato', sans-serif;
   margin: 0;
   color: #222;
 }
@@ -38,6 +41,7 @@ span {
 }
 header {
   background-image: url('../img/header.webp');
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
   padding: 2vh;
@@ -74,7 +78,7 @@ header .menu {
   margin-right: 10vh;
 }
 header h1 {
-  font-size: 12vh !important;
+  font-size: 8vw !important;
   font-weight: 700;
   margin-left: 2vw;
 }
@@ -159,6 +163,7 @@ main section#about h2 {
 }
 main section.image {
   background-image: url('../img/second.webp');
+  background-size: cover;
   opacity: 0.85;
   height: 100vh;
 }
@@ -185,7 +190,7 @@ main section#projects .container .part {
   text-align: center;
   user-select: none;
   background-color: #bbb;
-  height: 70vh;
+  height: auto;
   width: 30%;
   padding: 3vh;
   margin: 2vh;
@@ -214,10 +219,11 @@ main section#contact {
   background-color: #bbb;
   margin: 0;
   text-align: center;
+  padding-top: 1vh;
 }
 main section#contact .title {
   font-size: 6vh;
-  margin: 3vh;
+  margin: 4vh;
   font-weight: 700;
 }
 main section#contact aside.form {
@@ -227,12 +233,14 @@ main section#contact aside.form {
 main section#contact aside.form input[type=text] {
   width: 35vh;
   height: 2vw;
-  margin: 1vh;
+  margin-bottom: 1vh;
+  font-size: 1.1vw;
   text-align: center;
   transition: 0.25s;
   background-color: white;
   border: 0;
   user-select: none;
+  color: #666;
 }
 main section#contact aside.form input[type=text]:hover,
 main section#contact aside.form input[type=text]:focus {
@@ -242,12 +250,14 @@ main section#contact aside.form input[type=text]:focus {
 main section#contact aside.form textarea {
   width: 35vh;
   height: 10vw;
+  font-size: 1.1vw;
   font-family: inherit;
   text-align: center;
   padding: 1vh;
   border: 0;
   transition: 0.25s;
   resize: none;
+  color: #666;
 }
 main section#contact aside.form textarea:hover,
 main section#contact aside.form textarea:focus {
@@ -262,11 +272,12 @@ main section#contact aside.form button {
   margin: 1vh;
   transition: 0.25s;
   cursor: pointer;
-  color: white;
+  color: whitesmoke;
   background-color: #be0000;
   border: 0;
 }
-main section#contact aside.form button:hover {
+main section#contact aside.form button:hover,
+main section#contact aside.form button:focus {
   width: 40vh;
   background-color: #a00000;
   box-shadow: 3px 3px #222;
@@ -282,10 +293,10 @@ main section#contact aside.map iframe {
 }
 main section#contact aside.map label {
   display: block;
-  font-size: 4vh;
+  font-size: 2.5vw;
   margin: 3vh;
 }
 footer {
-  color: white;
+  color: whitesmoke;
   text-align: center;
 }

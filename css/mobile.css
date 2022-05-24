@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   header {
     background-position: 35%;
   }
@@ -10,7 +10,7 @@
     font-size: 3vh;
   }
   header h1 {
-    font-size: 7vh !important;
+    font-size: 13vw !important;
     margin-top: 4vh !important;
   }
   header div.item {
@@ -35,12 +35,14 @@
     float: none;
   }
   main section#about {
-    font-size: 1.6vh;
+    font-size: 2vh;
     padding: 3vh;
   }
   main section#about h2 {
-    font-size: 7vw;
-    margin-top: -0.1vh;
+    font-size: 12vw;
+    margin-top: -1vh;
+    margin-bottom: 3vh;
+    line-height: normal;
   }
   main section.image {
     background-position: 38%;
@@ -49,8 +51,9 @@
     font-size: 8vh;
   }
   main section#projects h2 {
-    font-size: 7vw;
-    margin-top: -0.1vh;
+    font-size: 12vw;
+    margin-top: -1vh;
+    margin-bottom: 2.5vh;
   }
   main section#projects .container {
     height: 200vh;
@@ -58,7 +61,10 @@
   }
   main section#projects .container .part {
     width: auto;
+    height: auto;
     padding: 2vh;
+    margin-left: 0;
+    margin-right: 0;
   }
   main section#projects .container .part h1 {
     font-size: 5vh;
@@ -76,6 +82,55 @@
     transform: rotate(2deg);
   }
   main section#contact {
-    height: 200vh;
+    height: auto;
+  }
+  main section#contact .title {
+    margin: 4vh;
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 11vw;
+  }
+  main section#contact aside.form {
+    float: none;
+    width: 100%;
+    margin-bottom: 8vh;
+  }
+  main section#contact aside.form input[type=text] {
+    width: 32vh;
+    height: 4.5vh;
+    font-size: 2vh;
+  }
+  main section#contact aside.form input[type=text]:hover,
+  main section#contact aside.form input[type=text]:focus {
+    width: 35vh;
+  }
+  main section#contact aside.form textarea {
+    width: 32vh;
+    height: 15vh;
+    font-size: 2vh;
+  }
+  main section#contact aside.form textarea:hover,
+  main section#contact aside.form textarea:focus {
+    width: 35vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+  }
+  main section#contact aside.form button {
+    width: 32vh;
+    height: 4.5vh;
+  }
+  main section#contact aside.form button:hover,
+  main section#contact aside.form button:focus {
+    width: 35vh;
+  }
+  main section#contact aside.map {
+    float: none;
+    width: 100%;
+  }
+  main section#contact aside.map iframe {
+    width: 100%;
+  }
+  main section#contact aside.map label {
+    font-size: 6vw;
   }
 }
