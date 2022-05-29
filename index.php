@@ -96,13 +96,13 @@
                     <p><input type="text" name="name" placeholder="Name" required></p>
                     <p><input type="text" name="email" placeholder="E-mail" required></p>
                     <p><textarea name="message" placeholder="Message" required></textarea></p>
-                    <div class="g-recaptcha" data-sitekey="6Lef3SkgAAAAACqeER43NByJxPMku6HYA_DjB6b_"></div>
+                    <div class="g-recaptcha" data-sitekey="reCAPTCHA_KEY"></div>
                     <button type='submit'>Send</button>
                 </form>
                 <?php
 
                 if (isset($_POST['name'])) {
-                    $secret_key = '6Lef3SkgAAAAACWcuNcuPbaq4mhYJtVyaM1GDuRZ';
+                    $secret_key = 'reCAPTCHA_KEY';
                     $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key . '&response=' . $_POST['g-recaptcha-response']));
 
                     if ($response->success) {
