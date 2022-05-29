@@ -282,6 +282,24 @@ main section#contact aside.form button:focus {
   background-color: #a00000;
   box-shadow: 3px 3px #222;
 }
+main section#contact aside.form div.g-recaptcha {
+  width: 98%;
+  margin: 1vh;
+}
+main section#contact aside.form div.g-recaptcha div {
+  margin-left: auto;
+  margin-right: auto;
+}
+main section#contact aside.form p {
+  user-select: none;
+  margin-top: 0;
+}
+main section#contact aside.form p.error {
+  color: #be0000;
+}
+main section#contact aside.form p.success {
+  color: green;
+}
 main section#contact aside.map {
   float: right;
   width: 40%;

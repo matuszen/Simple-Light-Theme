@@ -123,6 +123,9 @@
   main section#contact aside.form button:focus {
     width: 35vh;
   }
+  main section#contact aside.form div.g-recaptcha {
+    width: 90%;
+  }
   main section#contact aside.map {
     float: none;
     width: 100%;
