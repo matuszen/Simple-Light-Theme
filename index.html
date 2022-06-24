@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="fontello/css/fontello.css">
-    <script src="https://www.google.com/recaptcha/api.js" async></script>
     <title>Simple Light Theme</title>
 </head>
 
@@ -96,36 +95,15 @@
                     <p><input type="text" name="name" placeholder="Name" required></p>
                     <p><input type="text" name="email" placeholder="E-mail" required></p>
                     <p><textarea name="message" placeholder="Message" required></textarea></p>
-                    <div class="g-recaptcha" data-sitekey="reCAPTCHA_KEY"></div>
                     <button type='submit'>Send</button>
                 </form>
-                <?php
-
-                if (isset($_POST['name'])) {
-                    $secret_key = 'reCAPTCHA_KEY';
-                    $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key . '&response=' . $_POST['g-recaptcha-response']));
-
-                    if ($response->success) {
-                        $name = $_POST['name'];
-                        $email = $_POST['email'];
-                        $message = $_POST['message'] . "\n\n Name: $name \n\n Email: $email";
-                        $address = 'your-mail@mail.com';
-                        $topic = "Simple Light Theme (Contact form) - $email";
-
-                        if (mail($address, $topic, $message))
-                            echo "<p class='success'>Your E-mail is sent successfully</p>";
-                        else
-                            echo "<p class='error'><i class='icon-attention-alt'></i>Your E-mail is not sent. Try again</p>";
-                    } else {
-                        echo "<p class='error'><i class='icon-attention-alt'></i>Verify that you are not a robot</p>";
-                    }
-                }
-
-                ?>
             </aside>
             <aside class="map">
                 <p class="title">See where we are</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80677.57964658922!2d19.052560065125373!3d50.809408056944825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5c54e2ca8af%3A0x854f0d4d1a178236!2sCz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1653327327206!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80677.57964658922!2d19.052560065125373!3d50.809408056944825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5c54e2ca8af%3A0x854f0d4d1a178236!2sCz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1653327327206!5m2!1spl!2spl"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <label><span><i class="icon-phone"></i> </span>xx xxx xx xx</label>
                 <label><span><i class="icon-mail-alt"></i></span>contact@theme.pl</label>
             </aside>
