@@ -34,7 +34,7 @@ a {
 }
 
 header {
-  background-image: url("../img/header.webp");
+  background-image: url("../img/header-image.webp");
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -292,7 +292,7 @@ main .about__paragraph {
   }
 }
 main .hero-image {
-  background-image: url("../img/second.webp");
+  background-image: url("../img/hero-image.webp");
   background-size: cover;
   opacity: 0.85;
   display: flex;
@@ -469,7 +469,7 @@ main .card__text__person {
   }
   main .card {
     width: 60%;
-    height: 60vh;
+    height: 70vh;
   }
   main .card--two {
     background-size: 150%;
@@ -486,7 +486,10 @@ main .card__text__person {
     font-size: 8vw;
   }
   main .card {
-    width: 80%;
+    width: 70%;
+  }
+  main .card--two {
+    background-size: 220%;
   }
   main .card--three {
     background-position: 80%;
@@ -516,19 +519,21 @@ main .card__text__person {
   margin: 4vh;
   font-weight: 700;
 }
-.contact .form__input {
+.contact .form__input, .contact .form__submit {
   width: 40vh;
   height: 2vw;
   margin-bottom: 1vh;
   font-size: 1.1vw;
   text-align: center;
-  transition: width 0.25s;
-  background-color: white;
   border: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: width 0.25s, box-shadow 0.25s;
+}
+.contact .form__input {
+  background-color: white;
   color: #666;
 }
 .contact .form__input:hover, .contact .form__input:focus {
@@ -544,7 +549,7 @@ main .card__text__person {
   text-align: center;
   padding: 1vh;
   border: 0;
-  transition: width 0.25s, padding 0.25s;
+  transition: width 0.25s, padding 0.25s, box-shadow 0.25s;
   resize: none;
   color: #666;
 }
@@ -555,20 +560,13 @@ main .card__text__person {
   padding: 1vh 3.5vh;
 }
 .contact .form__submit {
-  width: 40vh;
-  height: 2vw;
-  margin: 1vh;
-  transition: width 0.25s;
   cursor: pointer;
   color: whitesmoke;
   background-color: rgb(190, 0, 0);
-  border: 0;
-  font-size: 1vw;
 }
 .contact .form__submit:hover, .contact .form__submit:focus {
   outline: none;
   width: 45vh;
-  background-color: rgb(160, 0, 0);
   box-shadow: 3px 3px #222;
 }
 .contact .map__title {
@@ -615,40 +613,70 @@ main .card__text__person {
 @media screen and (max-width: 768px) {
   .contact {
     flex-direction: column;
+    padding: 30px;
+  }
+  .contact .form__input, .contact .form__submit {
+    height: 5vw;
+    width: 50vw;
+    font-size: 2.6vw;
+  }
+  .contact .form__input:hover, .contact .form__input:focus, .contact .form__submit:hover, .contact .form__submit:focus {
+    width: 52vw;
+  }
+  .contact .form__message {
+    height: 20vw;
+    font-size: 2.6vw;
+    width: 50vw;
+  }
+  .contact .form__message:hover, .contact .form__message:focus {
+    width: 52vw;
+  }
+  .contact .form__title {
+    margin: 20px 0;
+  }
+  .contact .map__title {
+    margin: 20px 0;
   }
   .contact .map__content {
-    width: 47vw;
-    height: 52vh;
+    width: 50vw;
+    height: 60vh;
+  }
+  .contact .map__label {
+    font-size: 3.5vw;
   }
   .contact .fa-solid {
     margin-right: 10px;
   }
 }
 @media screen and (max-width: 576px) {
+  .contact {
+    padding: 30px;
+  }
   .contact .form__title {
     font-size: 7vw;
   }
   .contact .form__input, .contact .form__submit {
-    height: 5vw;
-    width: 50vw;
-    font-size: 2vw;
+    height: 8vw;
+    width: 70vw;
+    font-size: 3.5vw;
   }
   .contact .form__input:hover, .contact .form__input:focus, .contact .form__submit:hover, .contact .form__submit:focus {
-    width: 52vw;
+    width: 72vw;
   }
   .contact .form__message {
-    height: 16vw;
-    font-size: 2vw;
-    width: 50vw;
+    height: 30vw;
+    font-size: 3.5vw;
+    width: 70vw;
   }
   .contact .form__message:hover, .contact .form__message:focus {
-    width: 52vw;
+    width: 72vw;
   }
   .contact .map__title {
     font-size: 7vw;
+    margin: 20px 0;
   }
   .contact .map__content {
-    width: 65vw;
+    width: 70vw;
     height: 50vh;
   }
   .contact .map__label {

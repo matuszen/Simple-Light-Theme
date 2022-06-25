@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import 'addons';
-@import 'mobile';
 
 header {
-	background-image: url('../img/header.webp');
+	background-image: url('../img/header-image.webp');
 	background-size: cover;
 	height: 100vh;
 	width: 100%;
@@ -287,7 +286,7 @@ main {
 	}
 
 	.hero-image {
-		background-image: url('../img/second.webp');
+		background-image: url('../img/hero-image.webp');
 		background-size: cover;
 		opacity: 0.85;
 		display: flex;
@@ -491,7 +490,7 @@ main {
 		}
 		.card {
 			width: 60%;
-			height: 60vh;
+			height: 70vh;
 
 			&--two {
 				background-size: 150%;
@@ -516,7 +515,11 @@ main {
 			}
 		}
 		.card {
-			width: 80%;
+			width: 70%;
+
+			&--two {
+				background-size: 220%;
+			}
 
 			&--three {
 				background-position: 80%;
@@ -550,16 +553,20 @@ main {
 			font-weight: 700;
 		}
 
-		&__input {
+		&__input,
+		&__submit {
 			width: 40vh;
 			height: 2vw;
 			margin-bottom: 1vh;
 			font-size: 1.1vw;
 			text-align: center;
-			transition: width 0.25s;
-			background-color: white;
 			border: 0;
 			user-select: none;
+			transition: width 0.25s, box-shadow 0.25s;
+		}
+
+		&__input {
+			background-color: white;
 			color: #666;
 
 			&:hover,
@@ -578,7 +585,7 @@ main {
 			text-align: center;
 			padding: 1vh;
 			border: 0;
-			transition: width 0.25s, padding 0.25s;
+			transition: width 0.25s, padding 0.25s, box-shadow 0.25s;
 			resize: none;
 			color: #666;
 
@@ -592,21 +599,14 @@ main {
 		}
 
 		&__submit {
-			width: 40vh;
-			height: 2vw;
-			margin: 1vh;
-			transition: width 0.25s;
 			cursor: pointer;
 			color: whitesmoke;
 			background-color: $main-color;
-			border: 0;
-			font-size: 1vw;
 
 			&:hover,
 			&:focus {
 				outline: none;
 				width: 45vh;
-				background-color: rgb(160, 0, 0);
 				box-shadow: 3px 3px #222;
 			}
 		}
@@ -665,11 +665,49 @@ main {
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column;
+		padding: 30px;
+
+		.form {
+			&__input,
+			&__submit {
+				height: 5vw;
+				width: 50vw;
+				font-size: 2.6vw;
+
+				&:hover,
+				&:focus {
+					width: 52vw;
+				}
+			}
+
+			&__message {
+				height: 20vw;
+				font-size: 2.6vw;
+				width: 50vw;
+
+				&:hover,
+				&:focus {
+					width: 52vw;
+				}
+			}
+
+			&__title {
+				margin: 20px 0;
+			}
+		}
 
 		.map {
+			&__title {
+				margin: 20px 0;
+			}
+
 			&__content {
-				width: 47vw;
-				height: 52vh;
+				width: 50vw;
+				height: 60vh;
+			}
+
+			&__label {
+				font-size: 3.5vw;
 			}
 		}
 
@@ -679,6 +717,8 @@ main {
 	}
 
 	@media screen and (max-width: 576px) {
+		padding: 30px;
+
 		.form {
 			&__title {
 				font-size: 7vw;
@@ -686,24 +726,24 @@ main {
 
 			&__input,
 			&__submit {
-				height: 5vw;
-				width: 50vw;
-				font-size: 2vw;
+				height: 8vw;
+				width: 70vw;
+				font-size: 3.5vw;
 
 				&:hover,
 				&:focus {
-					width: 52vw;
+					width: 72vw;
 				}
 			}
 
 			&__message {
-				height: 16vw;
-				font-size: 2vw;
-				width: 50vw;
+				height: 30vw;
+				font-size: 3.5vw;
+				width: 70vw;
 
 				&:hover,
 				&:focus {
-					width: 52vw;
+					width: 72vw;
 				}
 			}
 		}
@@ -711,10 +751,11 @@ main {
 		.map {
 			&__title {
 				font-size: 7vw;
+				margin: 20px 0;
 			}
 
 			&__content {
-				width: 65vw;
+				width: 70vw;
 				height: 50vh;
 			}
 
