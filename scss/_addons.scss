@@ -1,0 +1,32 @@
+$main-color: rgb(190, 0, 0);
+$shadow-color: rgba(34, 34, 34, 0.7);
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: 'Lato', sans-serif;
+	color: #222;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.main-color {
+	color: $main-color;
+	user-select: none;
+}
+
+.fa-solid {
+	margin-right: 30px;
+}

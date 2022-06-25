@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
     <title>Simple Light Theme</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/6c9afd50ba.js" crossorigin="anonymous" async></script>
 </head>
 
 <body>
     <header>
-        <h1 class="item">Light theme<span>.</span></h1>
+        <span class="top-section">
+            <h1 class="title">Light theme</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__element"><a href="#about">About</a></li>
+                    <li class="menu__element"><a href="#team">Our team</a></li>
+                    <li class="menu__element"><a href="#contact">Contact us</a></li>
+                </ul>
+            </nav>
+        </span>
 
-        <nav class="menu">
-            <div class="item"><a href="#about">About</a></div>
-            <div class="item"><a href="#projects">Our projects</a></div>
-            <div class="item"><a href="#contact">Contact us</a></div>
-        </nav>
-
-        <a href="#about"><svg class="arrows">
-                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg></a>
-
+        <a href="#about">
+            <svg class="arrows">
+                <path class="arrows__one" d="M0 0 L30 32 L60 0"></path>
+                <path class="arrows__two" d="M0 20 L30 52 L60 20"></path>
+                <path class="arrows__three" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+        </a>
     </header>
     <main>
-        <section id="about">
-            <h2>About our company</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, distinctio at corporis illum,
+        <section id="about" class="about">
+            <h2 class="about__header">About our company</h2>
+            <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, distinctio
+                at corporis illum,
                 molestias amet perspiciatis suscipit culpa explicabo dolor enim aspernatur facere asperiores aliquid
                 similique tempore voluptas quae repellat!
                 Suscipit, quis harum? Ullam recusandae numquam possimus maxime non unde id totam iste ea accusamus,
@@ -57,60 +61,82 @@
                 aliquid?</p>
         </section>
 
-        <section class="image">
-            <h1><span>We are the best<br></span> in our industry</h1>
+        <section class="hero-image">
+            <h1 class="hero-image__header"><span class="main-color">We are the best<br></span> in our industry</h1>
         </section>
 
-        <section id="projects">
-            <h2>Take a look at our projects</h2>
-            <div class="container">
-                <div class="part">
-                    <h1>Project <span>#1</span></h1>
-                    <img src="img/project1.webp" alt="Project-1">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis dignissimos pariatur labore
-                        quae sequi a? Eligendi expedita porro impedit alias recusandae unde, dicta dolorum, quia aliquam
-                        quos accusantium culpa.</p>
+        <section id="team">
+            <h2 class="team__header">Take a look at our team</h2>
+            <div class="team__content">
+                <div class="card card--one">
+                    <button class="card__btn"><i class="far fa-question-circle"></i></button>
+                    <div class="card__text">
+                        <h1 class="card__text__header">CEO</h1>
+                        <h2 class="card__text__person">Anna Kowalska</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae quibusdam
+                            alias
+                            tenetursequi. Corporis eveniet, quae praesentium officiis esse minima, delectus fugiat eaque
+                            nam
+                            totam omnis hic ea? Maxime!
+                        </p>
+                    </div>
                 </div>
-                <div class="part">
-                    <h1>Project <span>#2</span></h1>
-                    <img src="img/project2.webp" alt="Project-2">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam placeat tempora eligendi
-                        provident rerum aperiam facere similique eum modi animi minima corrupti iure vero odit minus
-                        alias, aliquam ea!</p>
+
+                <div class="card card--two">
+                    <button class="card__btn"><i class="far fa-question-circle"></i></button>
+                    <div class="card__text">
+                        <h1 class="card__text__header">HR</h1>
+                        <h2 class="card__text__person">Jan Nowak</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae quibusdam
+                            alias
+                            tenetursequi. Corporis eveniet, quae praesentium officiis esse minima, delectus fugiat eaque
+                            nam
+                            totam omnis hic ea? Maxime!
+                        </p>
+                    </div>
                 </div>
-                <div class="part">
-                    <h1>Project <span>#3</span></h1>
-                    <img src="img/project3.webp" alt="Project-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et magnam assumenda necessitatibus!
-                        Exercitationem aliquid alias, maiores repellat corporis quam sint nemo perspiciatis? Deleniti
-                        quaerat beatae officia! Adipisci illo atque iusto?</p>
+
+                <div class="card card--three">
+                    <button class="card__btn"><i class="far fa-question-circle"></i></button>
+                    <div class="card__text">
+                        <h1 class="card__text__header">IT</h1>
+                        <h2 class="card__text__person">Adam Wiśniewski</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae quibusdam
+                            alias
+                            tenetursequi. Corporis eveniet, quae praesentium officiis esse minima, delectus fugiat eaque
+                            nam
+                            totam omnis hic ea? Maxime!
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact">
             <aside class="form">
-                <form action="" method="POST">
-                    <p class="title">Send us message</p>
-                    <p><input type="text" name="name" placeholder="Name" required></p>
-                    <p><input type="text" name="email" placeholder="E-mail" required></p>
-                    <p><textarea name="message" placeholder="Message" required></textarea></p>
-                    <button type='submit'>Send</button>
+                <form>
+                    <p class="form__title">Send us message</p>
+                    <p><input type="text" class="form__input" placeholder="Name" required></p>
+                    <p><input type="text" class="form__input" placeholder="E-mail" required></p>
+                    <p><textarea name="message" class="form__message" placeholder="Message" required></textarea></p>
+                    <button type='submit' class="form__submit">Send</button>
                 </form>
             </aside>
             <aside class="map">
-                <p class="title">See where we are</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80677.57964658922!2d19.052560065125373!3d50.809408056944825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5c54e2ca8af%3A0x854f0d4d1a178236!2sCz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1653327327206!5m2!1spl!2spl"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <label><span><i class="icon-phone"></i> </span>xx xxx xx xx</label>
-                <label><span><i class="icon-mail-alt"></i></span>contact@theme.pl</label>
+                <p class="map__title">See where we are</p>
+                <iframe class="map__content"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93894.91596247996!2d19.056900783940822!3d50.80522397738279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5c54e2ca8af%3A0x854f0d4d1a178236!2sCz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1656168628425!5m2!1spl!2spl"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <label class="map__label"><i class="fa-solid fa-phone main-color"></i>xx xxx xx xx</label>
+                <label class="map__label"><i class="fa-solid fa-envelope main-color"></i>contact@theme.pl</label>
             </aside>
         </section>
     </main>
-    <footer>
-        <p>Mateusz Nowak &copy 2022</p>
+    <footer class="footer">
+        <p class="footer__content">Mateusz Nowak &copy; 2022</p>
     </footer>
 </body>
 
