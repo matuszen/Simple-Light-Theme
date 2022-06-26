@@ -5,21 +5,19 @@ header {
 	background-image: url('../img/header-image.webp');
 	background-size: cover;
 	height: 100vh;
-	width: 100%;
 	user-select: none;
-	color: #eee;
+	color: $light-gray;
 
 	.top-section {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
 		padding: 0 40px;
 	}
 
 	.title {
 		font-size: 5vw;
-		text-shadow: 6px 6px $shadow-color;
+		text-shadow: 5px 5px 5px $shadow-color;
 		position: relative;
 
 		&::after {
@@ -28,10 +26,9 @@ header {
 			width: 0.8vw;
 			height: 0.8vw;
 			bottom: 0;
-			margin-left: 0.7vw;
-			margin-bottom: 1vw;
+			margin: 0 0 1vw 1vw;
 			background-color: $main-color;
-			box-shadow: 6px 6px $shadow-color;
+			box-shadow: 5px 5px 5px $shadow-color;
 		}
 	}
 
@@ -44,7 +41,7 @@ header {
 			margin-left: 50px;
 			width: fit-content;
 			cursor: pointer;
-			text-shadow: 2px 2px $shadow-color;
+			text-shadow: 2px 2px 2px $shadow-color;
 
 			&::after {
 				content: '';
@@ -67,9 +64,9 @@ header {
 		height: 100px;
 		position: absolute;
 		left: 50%;
-		margin-left: -30px;
 		bottom: 2vh;
-		transform: scale(1.5);
+		margin-left: -30px;
+		transform: scale(1);
 
 		&__one {
 			animation-delay: -0.5s;
@@ -85,13 +82,13 @@ header {
 	}
 
 	path {
-		stroke: #eee;
+		stroke: $light-gray;
 		fill: transparent;
 		stroke-width: 5px;
-		animation: arrow 2s infinite;
+		animation: arrows 2s infinite;
 	}
 
-	@keyframes arrow {
+	@keyframes arrows {
 		0% {
 			opacity: 0;
 		}
@@ -111,21 +108,21 @@ header {
 
 	@media screen and (max-width: 1400px) {
 		.title {
-			text-shadow: 4px 4px $shadow-color;
+			text-shadow: 4px 4px 4px $shadow-color;
 
 			&::after {
-				box-shadow: 4px 4px $shadow-color;
+				box-shadow: 4px 4px 4px $shadow-color;
 			}
 		}
 
 		.menu {
 			&__element {
-				text-shadow: 1px 1px $shadow-color;
+				text-shadow: 1px 1px 1px $shadow-color;
 			}
 		}
 
 		.arrows {
-			transform: scale(1);
+			transform: scale(0.8);
 		}
 	}
 
@@ -140,8 +137,7 @@ header {
 			&::after {
 				width: 10px;
 				height: 10px;
-				margin-bottom: 1.4vw;
-				margin-left: 1vw;
+				margin: 0 0 1.4vw 1vw;
 			}
 		}
 
@@ -155,6 +151,10 @@ header {
 				}
 			}
 		}
+
+		.arrows {
+			transform: scale(0.7);
+		}
 	}
 
 	@media screen and (max-width: 768px) {
@@ -167,14 +167,13 @@ header {
 
 		.title {
 			font-size: 13vw;
-			text-shadow: 2px 2px $shadow-color;
+			text-shadow: 2px 2px 2px $shadow-color;
 
 			&::after {
-				box-shadow: 2px 2px $shadow-color;
+				box-shadow: 2px 2px 2px $shadow-color;
 				width: 2vw;
 				height: 2vw;
-				margin-bottom: 2.5vw;
-				margin-left: 1.5vw;
+				margin: 0 0 2.5vw 1.5vw;
 			}
 		}
 
@@ -191,10 +190,6 @@ header {
 				margin: 0;
 			}
 		}
-
-		.arrows {
-			transform: scale(0.8);
-		}
 	}
 
 	@media screen and (max-width: 576px) {
@@ -204,8 +199,7 @@ header {
 			&::after {
 				width: 2.7vw;
 				height: 2.7vw;
-				margin-left: 2vw;
-				margin-bottom: 3vw;
+				margin: 0 0 3vw 2vw;
 			}
 		}
 
@@ -226,19 +220,12 @@ header {
 		}
 
 		.arrows {
-			transform: scale(0.7);
+			transform: scale(0.6);
 		}
 	}
 }
 
 main {
-	section {
-		width: 100%;
-		padding: 0 50px 70px 50px;
-		background: rgb(238, 238, 238);
-		background: linear-gradient(194deg, rgb(230, 228, 228) 50%, rgb(215, 215, 215) 50%);
-	}
-
 	.about {
 		text-align: justify;
 		line-height: 1.8;
@@ -286,25 +273,25 @@ main {
 	}
 
 	.hero-image {
-		background-image: url('../img/hero-image.webp');
-		background-size: cover;
-		opacity: 0.85;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		opacity: 0.85;
 		height: 100vh;
+		background-image: url('../img/hero-image.webp');
+		background-size: cover;
 
 		&__header {
 			text-align: center;
 			color: white;
-			text-shadow: 4px 4px $shadow-color;
+			text-shadow: 4px 4px 4px $shadow-color;
 			font-size: 7vw;
 			user-select: none;
 		}
 
 		@media screen and (max-width: 1400px) {
 			&__header {
-				text-shadow: 3px 3px $shadow-color;
+				text-shadow: 3px 3px 3px $shadow-color;
 			}
 		}
 
@@ -319,7 +306,7 @@ main {
 
 			&__header {
 				font-size: 9vw;
-				text-shadow: 2px 2px $shadow-color;
+				text-shadow: 2px 2px 2px $shadow-color;
 			}
 		}
 
@@ -346,19 +333,18 @@ main {
 
 	.card {
 		position: relative;
-		background-color: #fff;
 		height: 80vh;
 		width: 25%;
-		text-align: center;
-		background-position: center;
+		background-color: $white;
 		background-size: cover;
+		text-align: center;
 		border-radius: 15px;
 		box-shadow: 6px 6px 6px $shadow-color;
 		overflow: hidden;
 
 		&--one {
 			background-image: url('../img/Anna-Kowalska-CEO.webp');
-			background-position-x: 45%;
+			background-position: 45% center;
 		}
 
 		&--two {
@@ -369,7 +355,7 @@ main {
 
 		&--three {
 			background-image: url('../img/Adam-Wiśniewski-IT.webp');
-			background-position-x: 80%;
+			background-position: 80% center;
 		}
 
 		&__btn {
@@ -377,9 +363,9 @@ main {
 			top: 10px;
 			right: 10px;
 			padding: 10px;
+			color: $white;
 			background: none;
 			border: none;
-			color: #fff;
 			font-size: 36px;
 			text-shadow: 3px 3px 3px $shadow-color;
 			cursor: crosshair;
@@ -391,22 +377,22 @@ main {
 		}
 
 		&__text {
+			position: absolute;
 			display: flex;
 			justify-content: flex-end;
 			flex-direction: column;
-			position: absolute;
-			text-align: justify;
 			top: 0;
 			bottom: 0;
 			right: 0;
 			left: 0;
 			padding: 80px 30px;
-			background-color: rgba(0, 0, 0, 0.85);
-			color: #fff;
+			text-align: justify;
+			color: $light-gray;
+			font-size: 1vw;
+			opacity: 0.9;
 			clip-path: circle(0 at 50% 90%);
 			transition: clip-path 0.8s;
-			font-size: 1vw;
-			opacity: 0.85;
+			background-color: rgba(0, 0, 0, 0.85);
 
 			&__header {
 				color: $main-color;
@@ -428,7 +414,7 @@ main {
 			}
 
 			&--three {
-				background-position-x: 80%;
+				background-position: 80% center;
 			}
 
 			&__btn {
@@ -452,6 +438,10 @@ main {
 	}
 
 	@media screen and (max-width: 992px) {
+		section {
+			padding: 0 25px 15px 25px;
+		}
+
 		.team {
 			&__content {
 				flex-direction: column;
@@ -460,8 +450,8 @@ main {
 		}
 
 		.card {
-			width: 50%;
-			height: 70vh;
+			width: 55%;
+			height: 85vh;
 			margin: 0 auto 40px auto;
 
 			&--two {
@@ -489,7 +479,7 @@ main {
 			}
 		}
 		.card {
-			width: 60%;
+			width: 55%;
 			height: 70vh;
 
 			&--two {
@@ -510,12 +500,15 @@ main {
 
 	@media screen and (max-width: 576px) {
 		.team {
+			padding: 0;
+
 			&__header {
 				font-size: 8vw;
 			}
 		}
 		.card {
-			width: 70%;
+			width: 85%;
+			height: 50vh;
 
 			&--two {
 				background-size: 220%;
@@ -540,16 +533,21 @@ main {
 }
 
 .contact {
+	display: flex;
+	justify-content: space-around;
 	height: fit-content;
 	text-align: center;
 	padding-top: 1vh;
-	display: flex;
-	justify-content: space-around;
 
 	.form {
 		&__title {
-			font-size: 6vh;
 			margin: 4vh;
+			font-size: 6vh;
+			font-weight: 700;
+		}
+
+		&__alternate {
+			font-size: 0;
 			font-weight: 700;
 		}
 
@@ -557,23 +555,23 @@ main {
 		&__submit {
 			width: 40vh;
 			height: 2vw;
+			border: 0;
 			margin-bottom: 1vh;
 			font-size: 1.1vw;
 			text-align: center;
-			border: 0;
 			user-select: none;
 			transition: width 0.25s, box-shadow 0.25s;
 		}
 
 		&__input {
-			background-color: white;
-			color: #666;
+			background-color: $white;
+			color: $gray;
 
 			&:hover,
 			&:focus {
 				outline: none;
 				width: 45vh;
-				box-shadow: 3px 3px #222;
+				box-shadow: 3px 3px 3px $shadow-color;
 			}
 		}
 
@@ -583,31 +581,32 @@ main {
 			font-size: 1.1vw;
 			font-family: inherit;
 			text-align: center;
-			padding: 1vh;
+			color: $gray;
 			border: 0;
+			margin-bottom: 1vh;
+			padding: 1vh;
 			transition: width 0.25s, padding 0.25s, box-shadow 0.25s;
 			resize: none;
-			color: #666;
 
 			&:hover,
 			&:focus {
-				outline: none;
-				box-shadow: 3px 3px #222;
 				width: 45vh;
 				padding: 1vh 3.5vh;
+				box-shadow: 3px 3px 3px $shadow-color;
+				outline: none;
 			}
 		}
 
 		&__submit {
 			cursor: pointer;
-			color: whitesmoke;
+			color: $darker-light;
 			background-color: $main-color;
 
 			&:hover,
 			&:focus {
-				outline: none;
 				width: 45vh;
-				box-shadow: 3px 3px #222;
+				box-shadow: 3px 3px 3px $shadow-color;
+				outline: none;
 			}
 		}
 	}
@@ -615,22 +614,23 @@ main {
 	.map {
 		&__title {
 			font-size: 6vh;
-			margin: 4vh;
 			font-weight: 700;
+			margin: 4vh;
 		}
 
 		&__content {
 			width: 32vw;
 			height: 42vh;
-			user-select: none;
 			border: 0;
+			box-shadow: 3px 3px 3px $shadow-color;
+			user-select: none;
 		}
 
 		&__label {
 			display: block;
-			cursor: text;
 			font-size: 2.5vw;
 			margin-top: 3vh;
+			cursor: text;
 		}
 	}
 
@@ -665,49 +665,57 @@ main {
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column;
-		padding: 30px;
+		padding: 0 30px;
 
 		.form {
+			&__title {
+				font-size: 0;
+				margin: 0;
+			}
+
+			&__alternate {
+				margin: 20px 0;
+				font-size: 5vw;
+			}
+
 			&__input,
 			&__submit {
 				height: 5vw;
-				width: 50vw;
+				width: 55vw;
 				font-size: 2.6vw;
 
 				&:hover,
 				&:focus {
-					width: 52vw;
+					width: 57vw;
 				}
 			}
 
 			&__message {
 				height: 20vw;
+				width: 55vw;
 				font-size: 2.6vw;
-				width: 50vw;
 
 				&:hover,
 				&:focus {
-					width: 52vw;
+					width: 57vw;
 				}
-			}
-
-			&__title {
-				margin: 20px 0;
 			}
 		}
 
 		.map {
 			&__title {
-				margin: 20px 0;
+				font-size: 0;
+				margin: 10px;
 			}
 
 			&__content {
-				width: 50vw;
+				width: 55vw;
 				height: 60vh;
 			}
 
 			&__label {
 				font-size: 3.5vw;
+				margin-bottom: 4vw;
 			}
 		}
 
@@ -717,10 +725,8 @@ main {
 	}
 
 	@media screen and (max-width: 576px) {
-		padding: 30px;
-
 		.form {
-			&__title {
+			&__alternate {
 				font-size: 7vw;
 			}
 
@@ -738,8 +744,8 @@ main {
 
 			&__message {
 				height: 30vw;
-				font-size: 3.5vw;
 				width: 70vw;
+				font-size: 3.5vw;
 
 				&:hover,
 				&:focus {
@@ -749,11 +755,6 @@ main {
 		}
 
 		.map {
-			&__title {
-				font-size: 7vw;
-				margin: 20px 0;
-			}
-
 			&__content {
 				width: 70vw;
 				height: 50vh;
@@ -771,7 +772,7 @@ footer {
 		&__content {
 			font-size: 1vw;
 			padding: 15px;
-			color: whitesmoke;
+			color: $darker-light;
 			text-align: center;
 		}
 

@@ -16,9 +16,16 @@ body {
   color: #222;
 }
 
+section {
+  width: 100%;
+  padding: 0 50px 70px 50px;
+  background: rgb(238, 238, 238);
+  background: linear-gradient(194deg, rgb(230, 228, 228) 50%, rgb(215, 215, 215) 50%);
+}
+
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .main-color {
@@ -37,23 +44,21 @@ header {
   background-image: url("../img/header-image.webp");
   background-size: cover;
   height: 100vh;
-  width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #eee;
+  color: #ddd;
 }
 header .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 40px;
 }
 header .title {
   font-size: 5vw;
-  text-shadow: 6px 6px rgba(34, 34, 34, 0.7);
+  text-shadow: 5px 5px 5px rgba(34, 34, 34, 0.7);
   position: relative;
 }
 header .title::after {
@@ -62,10 +67,9 @@ header .title::after {
   width: 0.8vw;
   height: 0.8vw;
   bottom: 0;
-  margin-left: 0.7vw;
-  margin-bottom: 1vw;
+  margin: 0 0 1vw 1vw;
   background-color: rgb(190, 0, 0);
-  box-shadow: 6px 6px rgba(34, 34, 34, 0.7);
+  box-shadow: 5px 5px 5px rgba(34, 34, 34, 0.7);
 }
 header .menu {
   display: flex;
@@ -78,7 +82,7 @@ header .menu__element {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  text-shadow: 2px 2px rgba(34, 34, 34, 0.7);
+  text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.7);
 }
 header .menu__element::after {
   content: "";
@@ -97,9 +101,9 @@ header .arrows {
   height: 100px;
   position: absolute;
   left: 50%;
-  margin-left: -30px;
   bottom: 2vh;
-  transform: scale(1.5);
+  margin-left: -30px;
+  transform: scale(1);
 }
 header .arrows__one {
   -webkit-animation-delay: -0.5s;
@@ -114,13 +118,13 @@ header .arrows__three {
           animation-delay: 0s;
 }
 header path {
-  stroke: #eee;
+  stroke: #ddd;
   fill: transparent;
   stroke-width: 5px;
-  -webkit-animation: arrow 2s infinite;
-          animation: arrow 2s infinite;
+  -webkit-animation: arrows 2s infinite;
+          animation: arrows 2s infinite;
 }
-@-webkit-keyframes arrow {
+@-webkit-keyframes arrows {
   0% {
     opacity: 0;
   }
@@ -134,7 +138,7 @@ header path {
     opacity: 0;
   }
 }
-@keyframes arrow {
+@keyframes arrows {
   0% {
     opacity: 0;
   }
@@ -150,16 +154,16 @@ header path {
 }
 @media screen and (max-width: 1400px) {
   header .title {
-    text-shadow: 4px 4px rgba(34, 34, 34, 0.7);
+    text-shadow: 4px 4px 4px rgba(34, 34, 34, 0.7);
   }
   header .title::after {
-    box-shadow: 4px 4px rgba(34, 34, 34, 0.7);
+    box-shadow: 4px 4px 4px rgba(34, 34, 34, 0.7);
   }
   header .menu__element {
-    text-shadow: 1px 1px rgba(34, 34, 34, 0.7);
+    text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.7);
   }
   header .arrows {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 }
 @media screen and (max-width: 992px) {
@@ -172,8 +176,7 @@ header path {
   header .title::after {
     width: 10px;
     height: 10px;
-    margin-bottom: 1.4vw;
-    margin-left: 1vw;
+    margin: 0 0 1.4vw 1vw;
   }
   header .menu__element {
     font-size: 20px;
@@ -181,6 +184,9 @@ header path {
   }
   header .menu__element::after {
     margin-top: 3px;
+  }
+  header .arrows {
+    transform: scale(0.7);
   }
 }
 @media screen and (max-width: 768px) {
@@ -193,14 +199,13 @@ header path {
   }
   header .title {
     font-size: 13vw;
-    text-shadow: 2px 2px rgba(34, 34, 34, 0.7);
+    text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.7);
   }
   header .title::after {
-    box-shadow: 2px 2px rgba(34, 34, 34, 0.7);
+    box-shadow: 2px 2px 2px rgba(34, 34, 34, 0.7);
     width: 2vw;
     height: 2vw;
-    margin-bottom: 2.5vw;
-    margin-left: 1.5vw;
+    margin: 0 0 2.5vw 1.5vw;
   }
   header nav {
     width: 100%;
@@ -214,9 +219,6 @@ header path {
     font-size: 3.5vw;
     margin: 0;
   }
-  header .arrows {
-    transform: scale(0.8);
-  }
 }
 @media screen and (max-width: 576px) {
   header .title {
@@ -225,8 +227,7 @@ header path {
   header .title::after {
     width: 2.7vw;
     height: 2.7vw;
-    margin-left: 2vw;
-    margin-bottom: 3vw;
+    margin: 0 0 3vw 2vw;
   }
   header nav {
     padding: 0 50px;
@@ -241,16 +242,10 @@ header path {
     height: 9%;
   }
   header .arrows {
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
 }
 
-main section {
-  width: 100%;
-  padding: 0 50px 70px 50px;
-  background: rgb(238, 238, 238);
-  background: linear-gradient(194deg, rgb(230, 228, 228) 50%, rgb(215, 215, 215) 50%);
-}
 main .about {
   text-align: justify;
   line-height: 1.8;
@@ -292,18 +287,18 @@ main .about__paragraph {
   }
 }
 main .hero-image {
-  background-image: url("../img/hero-image.webp");
-  background-size: cover;
-  opacity: 0.85;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.85;
   height: 100vh;
+  background-image: url("../img/hero-image.webp");
+  background-size: cover;
 }
 main .hero-image__header {
   text-align: center;
   color: white;
-  text-shadow: 4px 4px rgba(34, 34, 34, 0.7);
+  text-shadow: 4px 4px 4px rgba(34, 34, 34, 0.7);
   font-size: 7vw;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -312,7 +307,7 @@ main .hero-image__header {
 }
 @media screen and (max-width: 1400px) {
   main .hero-image__header {
-    text-shadow: 3px 3px rgba(34, 34, 34, 0.7);
+    text-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
   }
 }
 @media screen and (max-width: 992px) {
@@ -326,7 +321,7 @@ main .hero-image__header {
   }
   main .hero-image__header {
     font-size: 9vw;
-    text-shadow: 2px 2px rgba(34, 34, 34, 0.7);
+    text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.7);
   }
 }
 @media screen and (max-width: 576px) {
@@ -348,19 +343,18 @@ main .team__content {
 }
 main .card {
   position: relative;
-  background-color: #fff;
   height: 80vh;
   width: 25%;
-  text-align: center;
-  background-position: center;
+  background-color: #fff;
   background-size: cover;
+  text-align: center;
   border-radius: 15px;
   box-shadow: 6px 6px 6px rgba(34, 34, 34, 0.7);
   overflow: hidden;
 }
 main .card--one {
   background-image: url("../img/Anna-Kowalska-CEO.webp");
-  background-position-x: 45%;
+  background-position: 45% center;
 }
 main .card--two {
   background-image: url("../img/Jan-Nowak-HR.webp");
@@ -369,16 +363,16 @@ main .card--two {
 }
 main .card--three {
   background-image: url("../img/Adam-Wiśniewski-IT.webp");
-  background-position-x: 80%;
+  background-position: 80% center;
 }
 main .card__btn {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 10px;
+  color: #fff;
   background: none;
   border: none;
-  color: #fff;
   font-size: 36px;
   text-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
   cursor: crosshair;
@@ -389,25 +383,25 @@ main .card__btn:hover ~ .card__text {
           clip-path: circle(120% at 50% 50%);
 }
 main .card__text {
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  position: absolute;
-  text-align: justify;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 80px 30px;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
+  text-align: justify;
+  color: #ddd;
+  font-size: 1vw;
+  opacity: 0.9;
   -webkit-clip-path: circle(0 at 50% 90%);
           clip-path: circle(0 at 50% 90%);
   transition: -webkit-clip-path 0.8s;
   transition: clip-path 0.8s;
   transition: clip-path 0.8s, -webkit-clip-path 0.8s;
-  font-size: 1vw;
-  opacity: 0.85;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 main .card__text__header {
   color: rgb(190, 0, 0);
@@ -423,7 +417,7 @@ main .card__text__person {
     background-size: 190%;
   }
   main .card--three {
-    background-position-x: 80%;
+    background-position: 80% center;
   }
   main .card__btn {
     font-size: 2.5vw;
@@ -441,13 +435,16 @@ main .card__text__person {
   }
 }
 @media screen and (max-width: 992px) {
+  main section {
+    padding: 0 25px 15px 25px;
+  }
   main .team__content {
     flex-direction: column;
     justify-content: center;
   }
   main .card {
-    width: 50%;
-    height: 70vh;
+    width: 55%;
+    height: 85vh;
     margin: 0 auto 40px auto;
   }
   main .card--two {
@@ -468,7 +465,7 @@ main .card__text__person {
     font-size: 7vw;
   }
   main .card {
-    width: 60%;
+    width: 55%;
     height: 70vh;
   }
   main .card--two {
@@ -482,11 +479,15 @@ main .card__text__person {
   }
 }
 @media screen and (max-width: 576px) {
+  main .team {
+    padding: 0;
+  }
   main .team__header {
     font-size: 8vw;
   }
   main .card {
-    width: 70%;
+    width: 85%;
+    height: 50vh;
   }
   main .card--two {
     background-size: 220%;
@@ -506,26 +507,30 @@ main .card__text__person {
 }
 
 .contact {
+  display: flex;
+  justify-content: space-around;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   padding-top: 1vh;
-  display: flex;
-  justify-content: space-around;
 }
 .contact .form__title {
-  font-size: 6vh;
   margin: 4vh;
+  font-size: 6vh;
+  font-weight: 700;
+}
+.contact .form__alternate {
+  font-size: 0;
   font-weight: 700;
 }
 .contact .form__input, .contact .form__submit {
   width: 40vh;
   height: 2vw;
+  border: 0;
   margin-bottom: 1vh;
   font-size: 1.1vw;
   text-align: center;
-  border: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -533,13 +538,13 @@ main .card__text__person {
   transition: width 0.25s, box-shadow 0.25s;
 }
 .contact .form__input {
-  background-color: white;
-  color: #666;
+  background-color: #fff;
+  color: #555;
 }
 .contact .form__input:hover, .contact .form__input:focus {
   outline: none;
   width: 45vh;
-  box-shadow: 3px 3px #222;
+  box-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
 }
 .contact .form__message {
   width: 40vh;
@@ -547,47 +552,49 @@ main .card__text__person {
   font-size: 1.1vw;
   font-family: inherit;
   text-align: center;
-  padding: 1vh;
+  color: #555;
   border: 0;
+  margin-bottom: 1vh;
+  padding: 1vh;
   transition: width 0.25s, padding 0.25s, box-shadow 0.25s;
   resize: none;
-  color: #666;
 }
 .contact .form__message:hover, .contact .form__message:focus {
-  outline: none;
-  box-shadow: 3px 3px #222;
   width: 45vh;
   padding: 1vh 3.5vh;
+  box-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
+  outline: none;
 }
 .contact .form__submit {
   cursor: pointer;
-  color: whitesmoke;
+  color: #eee;
   background-color: rgb(190, 0, 0);
 }
 .contact .form__submit:hover, .contact .form__submit:focus {
-  outline: none;
   width: 45vh;
-  box-shadow: 3px 3px #222;
+  box-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
+  outline: none;
 }
 .contact .map__title {
   font-size: 6vh;
-  margin: 4vh;
   font-weight: 700;
+  margin: 4vh;
 }
 .contact .map__content {
   width: 32vw;
   height: 42vh;
+  border: 0;
+  box-shadow: 3px 3px 3px rgba(34, 34, 34, 0.7);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border: 0;
 }
 .contact .map__label {
   display: block;
-  cursor: text;
   font-size: 2.5vw;
   margin-top: 3vh;
+  cursor: text;
 }
 @media screen and (max-width: 1400px) {
   .contact {
@@ -613,46 +620,50 @@ main .card__text__person {
 @media screen and (max-width: 768px) {
   .contact {
     flex-direction: column;
-    padding: 30px;
+    padding: 0 30px;
+  }
+  .contact .form__title {
+    font-size: 0;
+    margin: 0;
+  }
+  .contact .form__alternate {
+    margin: 20px 0;
+    font-size: 5vw;
   }
   .contact .form__input, .contact .form__submit {
     height: 5vw;
-    width: 50vw;
+    width: 55vw;
     font-size: 2.6vw;
   }
   .contact .form__input:hover, .contact .form__input:focus, .contact .form__submit:hover, .contact .form__submit:focus {
-    width: 52vw;
+    width: 57vw;
   }
   .contact .form__message {
     height: 20vw;
+    width: 55vw;
     font-size: 2.6vw;
-    width: 50vw;
   }
   .contact .form__message:hover, .contact .form__message:focus {
-    width: 52vw;
-  }
-  .contact .form__title {
-    margin: 20px 0;
+    width: 57vw;
   }
   .contact .map__title {
-    margin: 20px 0;
+    font-size: 0;
+    margin: 10px;
   }
   .contact .map__content {
-    width: 50vw;
+    width: 55vw;
     height: 60vh;
   }
   .contact .map__label {
     font-size: 3.5vw;
+    margin-bottom: 4vw;
   }
   .contact .fa-solid {
     margin-right: 10px;
   }
 }
 @media screen and (max-width: 576px) {
-  .contact {
-    padding: 30px;
-  }
-  .contact .form__title {
+  .contact .form__alternate {
     font-size: 7vw;
   }
   .contact .form__input, .contact .form__submit {
@@ -665,15 +676,11 @@ main .card__text__person {
   }
   .contact .form__message {
     height: 30vw;
-    font-size: 3.5vw;
     width: 70vw;
+    font-size: 3.5vw;
   }
   .contact .form__message:hover, .contact .form__message:focus {
     width: 72vw;
-  }
-  .contact .map__title {
-    font-size: 7vw;
-    margin: 20px 0;
   }
   .contact .map__content {
     width: 70vw;
@@ -687,7 +694,7 @@ main .card__text__person {
 footer .footer__content {
   font-size: 1vw;
   padding: 15px;
-  color: whitesmoke;
+  color: #eee;
   text-align: center;
 }
 @media screen and (max-width: 992px) {

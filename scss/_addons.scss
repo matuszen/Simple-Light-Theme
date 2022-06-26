@@ -1,3 +1,8 @@
+$white: #fff;
+$darker-light: #eee;
+$light-gray: #ddd;
+$gray: #555;
+
 $main-color: rgb(190, 0, 0);
 $shadow-color: rgba(34, 34, 34, 0.7);
 
@@ -17,9 +22,16 @@ body {
 	color: #222;
 }
 
+section {
+	width: 100%;
+	padding: 0 50px 70px 50px;
+	background: rgb(238, 238, 238);
+	background: linear-gradient(194deg, rgb(230, 228, 228) 50%, rgb(215, 215, 215) 50%);
+}
+
 a {
-	text-decoration: none;
 	color: inherit;
+	text-decoration: none;
 }
 
 .main-color {
